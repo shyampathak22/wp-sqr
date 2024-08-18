@@ -1,0 +1,821 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #000;
+    padding-top: 20px;
+    padding-left: 5px;
+    border-right: 2px solid #fff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding-left: 12px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-family: "Bebas Neue", sans-serif;
+    font-stretch: ultra-condensed;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #CD2C2E;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+}
+
+.content {
+    padding-top: 350px ;
+    text-align: center;
+}
+
+.content #home #name{
+    background-color: #000;
+    font-size: 90px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 0px;
+    margin-left: 400px;
+}
+
+.content #home #home-subheadings{
+    background-color: #000;
+    font-size: 25px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    padding-bottom: 350px;
+    margin-left: 400px;
+}
+
+.content #about #about-title{
+    text-align: left;
+    text-indent: 30px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    border-bottom: white solid 2px;
+    margin-left: 400px;
+}
+
+.about-section-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+}
+
+.about-flex-columns {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-flex-columns #about-job-title{
+    text-align: left;
+    border-left: #CD2C2E solid 5px;
+    padding-left: 10px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.about-flex-columns img{
+    height: auto;
+    max-width: 100%;
+}
+
+.about-flex-columns #about-description{
+    text-align: left;
+    padding: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    font-stretch: ultra-expanded;
+}
+
+.red-background-for-whoami {
+    height: 200px; /* Adjust the height as needed */
+    width: 100%; /* Adjust the width as needed */
+    background: linear-gradient(to bottom, 
+                #000 20.00%, 
+                #CD2C2E 40.00%, #CD2C2E 60.00%, 
+                #000 80%);
+    height: 100%;
+    width: 100%;
+    padding: 15px 40px 15px 40px;
+}
+
+.whoami-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 40px 20px;
+    max-width: 1200px;
+    
+    gap: 20px;
+    margin-left: 410px;
+}
+
+.whoami-column {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 40px;
+    text-align: left;
+    flex: 1;
+    margin: 0 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    font-stretch: ultra-expanded;
+}
+
+#description-column {
+    background-color: #1c1c1c;
+}
+
+#whoami-image-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: linear-gradient(to right, #000 50%, #CD2C2E 50%);
+    position: relative;
+    overflow: auto;
+    resize: both;
+}
+
+#whoami-image-column img {
+    max-width: 100%;
+    height: 100%;
+    filter: sepia(100%) saturate(100%) hue-rotate(320deg);
+}
+
+#whoami-image-column img{
+    object-fit: cover;
+}
+
+#whoami-title,
+#whatido-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#whoami-title .title-red{
+    color: #CD2C2E;
+    font-weight: 900;
+}
+
+#whatido-title .title-grey {
+    color: #CD2C2E;;
+    font-weight: 900;
+}
+
+#whoami-content1-column1,
+#whoami-content2-column1,
+#whoami-list-column1{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 200%;
+}
+
+#whoami-content1-column3,
+#whatido-list-column {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#whoami-list-column1,
+#whatido-list-column {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#whatido-list-column{
+    text-align: center;
+}
+
+#whatido-icons {
+    align-items: center;
+    justify-content: center;
+}
+
+.red-background-for-achievements {
+    background: linear-gradient(to bottom, 
+    #000 20.00%, 
+    #CD2C2E 40.00%, #CD2C2E 60.00%, 
+    #000 80%);
+    height: 100%;
+    width: 100%;
+    padding: 15px 40px 15px 40px;;
+}
+
+.achievements-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    margin-left: 410px
+}
+
+.achievements-column {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 40px;
+    text-align: left;
+    flex: 1;
+    margin: 0 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    font-stretch: ultra-expanded;
+}
+
+#achievements-image-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: linear-gradient(to right, #000 50%, #CD2C2E 50%);
+    position: relative;
+    overflow: auto;
+    resize: both;
+}
+
+#achievements-image-column img {
+    max-width: 100%;
+    height: 100%;
+    filter: sepia(100%) saturate(50%) hue-rotate(-30deg);
+}
+
+#achievementscolumn1{
+    background-color: #1c1c1c;
+}
+#achievements-image-column img{
+    object-fit: cover;
+}
+
+#achievements-title,
+#achievements-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#achievements-title .title-red{
+    color: #CD2C2E;
+    font-weight: 900;
+}
+
+#achievements-title .title-grey {
+    color:#cd2c2e;
+    font-weight: 900;
+}
+
+#achievements-content1-column1,
+#achievements-content2-column1,
+#achievements-list-column1{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 200%;
+}
+
+#achievements-content1-column3,
+#achievements-list-column {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+#achievements-list-column1,
+#achievements-list-column {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#achievements-list-column{
+    text-align: center;
+}
+
+#achievements-icons {
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 8%;
+    transform: translateY(-50%);
+    fill: #CD2C2E;
+    height: 100px;
+    width: 100px;
+}
+
+#achievements-content1-column1{
+    text-align: center;
+    font-weight: bold;
+}
+
+.content #education #education-title{
+    text-align: left;
+    text-indent: 30px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    border-bottom: white solid 2px;
+    margin-left: 400px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+    margin-left: 320px
+}
+
+.image-overlay {
+    flex:1;
+    position: relative;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.university-background-image {
+    width: 300px;
+    height: auto;
+    position: relative;
+}
+
+.university-background-image:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,255,255, 0.5);
+}
+
+.university-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #CD2C2E;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    font-stretch:semi-condensed;
+}
+
+.university-degree-type {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #CD2C2E;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    font-stretch:semi-condensed;
+}
+
+.university-degree-title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #CD2C2E;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    font-stretch:semi-condensed;
+}
+
+.university-degree-year {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #CD2C2E;
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 15px;
+    font-stretch:semi-condensed;
+}
+
+.image-overlay {
+    position: relative;
+    width: 300px;
+    height: auto;
+    text-align: center;
+}
+
+.image-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 107px;
+    width: 300px;
+    height: 300px;
+    background-color:rgba(168, 7, 7, 0.4); /* Red tint with 50% opacity */
+    pointer-events: none; /* Allows clicking through the overlay */
+}
+
+.content #experience #experience-title{
+    text-align: left;
+    text-indent: 30px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    border-bottom: white solid 2px;
+    margin-left: 400px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 490px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    background-color: white;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.timeline-item.left::after, .timeline-item.right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+.timeline-item.left::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item.right::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.timeline-content {
+    width: 100%;
+    background-color: white;
+    color: #000000;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    height: 250px;
+    position: relative;
+}
+
+.timeline-content:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.front {
+    position: relative;
+}
+
+.front .overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(168, 7, 7, 0.4);
+    z-index: 1;
+}
+
+.front img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+    background-color: white;
+}
+
+.text-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.company-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.position-title, .years-worked {
+    font-size: 16px;
+    color: #555;
+}
+
+.back {
+    background-color: #3a3a3a;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+    border: none;
+    padding: 20px;
+}
+
+.job-title {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.years {
+    font-size: 16px;
+    color: #555;
+}
+
+p {
+    font-size: 14px;
+    margin: 10px 0;
+    max-width: 100%;
+    line-height: 1.5;
+}
+
+.content #recommendations #recommendation-title{
+    text-align: left;
+    text-indent: 30px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    border-bottom: white solid 2px;
+    margin-left: 400px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 660px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.mySlide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    display: none; /* Hide all slides by default */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.active-slide {
+    display: block;
+    opacity: 1;
+}
+
+.carousel-container q {
+    font-size: 1em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.carousel-container .author {
+    margin-top: 10px;
+    font-size: 2em;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    font-weight: 500;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -28px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dots-container {
+    text-align: center;
+    margin-left: 360px;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.content #resume-download #resume-title{
+    text-align: left;
+    text-indent: 30px;
+    font-family: Impact;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    border-bottom: white solid 2px;
+    margin-left: 400px;
+}
+
+#resume-download {
+    text-align: center;
+}
+
+button {
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+    margin-left: 960px;
+    width: 300px;
+    height: 75px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+button svg {
+    fill: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+    }
+    .timeline-item {
+        max-width: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .whoami-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whoami-column {
+        margin: 10px 0;
+    }
+
+    #image-column {
+        margin: 20px 0;
+    }
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #000;
+    border-radius: 8px;
+}
