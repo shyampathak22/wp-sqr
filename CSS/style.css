@@ -494,151 +494,62 @@ body {
 }
 
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 490px;
+    padding: 20px;
+    margin-left: -125px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    font-stretch: ultra-expanded;
 }
 
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 10px;
-    background-color: white;
-}
-
-.timeline-item {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
+.timeline-event {
     margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 250px;
+    width: 300px;
+}
+
+.card {
     perspective: 1000px;
 }
 
-.timeline-item.left::after, .timeline-item.right::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 2px;
-    height: 20px;
-    background-color: white;
-    border-radius: 1px;
-}
-
-.timeline-item.left::after {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-item.right::after {
-    right: 50%;
-    transform: translateX(50%);
-}
-
-.timeline-content {
-    width: 100%;
-    background-color: white;
-    color: #000000;
-    border-radius: 6px;
-    overflow: hidden;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-    height: 250px;
-    position: relative;
-}
-
-.timeline-content:hover {
-    transform: rotateY(180deg);
-}
-
-.front, .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.card-front, .card-back {
+    width: 750px;
+    height: 150px;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.front {
-    position: relative;
-}
-
-.front .overlay::after {
-    content: "";
+    transition: transform 0.6s;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(168, 7, 7, 0.4);
-    z-index: 1;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.front img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: cover;
-    background-color: white;
-}
-
-.text-content {
-    position: relative;
+.card-front {
     z-index: 2;
+    transform: rotateY(0deg);
     text-align: center;
+    justify-content: center;
 }
 
-.company-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.position-title, .years-worked {
-    font-size: 16px;
-    color: #555;
-}
-
-.back {
-    background-color: #3a3a3a;
-    color: white;
+.card-back {
     transform: rotateY(180deg);
-    text-align: center;
-    border: none;
-    padding: 20px;
 }
 
-.job-title {
-    font-size: 18px;
-    margin: 10px 0;
+.card:hover .card-front {
+    transform: rotateY(-180deg);
 }
 
-.years {
-    font-size: 16px;
-    color: #555;
-}
-
-p {
-    font-size: 14px;
-    margin: 10px 0;
-    max-width: 100%;
-    line-height: 1.5;
+.card:hover .card-back {
+    transform: rotateY(0deg);
 }
 
 .content #recommendations #recommendation-title{
